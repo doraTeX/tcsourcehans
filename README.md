@@ -13,11 +13,7 @@ ZRさんの [tcsourcehans パッケージ](http://d.hatena.ne.jp/zrbabbler/20140
   * `tcsourcehans.sty` → `$TEXMF/tex/latex/sourcehans/`
 
 2. [SourceForge の Source Han Sans のレポジトリ](http://sourceforge.net/projects/source-han-sans.adobe/files/) から，SourceHanSansJP-1.000.zip というファイルをダウンロードし，
-展開して出てくる各フォントファイルを
-`
-$TEXMF/fonts/opentype/sourcehans/
-`
-に移動します。
+展開して出てくる各フォントファイルを `$TEXMF/fonts/opentype/sourcehans/` に移動します。
 
 3. 必要ならば `maketexlsr` を実行します。
 
