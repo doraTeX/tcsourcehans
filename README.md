@@ -1,7 +1,7 @@
 tcsourcehans
 ============
 
-upLaTeX で [Source Han Sans（源ノ角ゴシック）](http://blog.typekit.com/alternate/source-han-sans-jp/) を使うためのパッケージです。  
+upLaTeX で [Source Han Sans（源ノ角ゴシック）](http://blog.typekit.com/alternate/source-han-sans-jp/)を使うためのパッケージです。  
 ZRさんの [tcsourcehans パッケージ](http://d.hatena.ne.jp/zrbabbler/20140719/1405795403) を縦書き対応に拡張したものです。
 
 インストール法
