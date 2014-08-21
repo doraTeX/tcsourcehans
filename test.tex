@@ -1,0 +1,31 @@
+% upLaTeX document
+\documentclass[uplatex]{jsarticle}
+\usepackage{tcsourcehans}
+\usepackage{plext}
+
+\newcommand\test[2]{\makebox[6zw][l]{#2}{\kanjifamily{sourcehans}\fontseries{#1}\selectfont 源ノ角ゴシック、（「ほげ」です。）でした。}\par}
+
+\begin{document}
+\setlength{\parindent}{0zw}
+
+\test{el}{ExtraLight}
+\test{l}{Light}
+\test{m}{Normal}
+\test{mb}{Regular}
+\test{db}{Medium}
+\test{bx}{Bold}
+\test{eb}{Heavy}
+
+\vspace{1cm}
+
+\parbox<t>{30zw}{%
+\test{el}{ExtraLight}
+\test{l}{Light}
+\test{m}{Normal}
+\test{mb}{Regular}
+\test{db}{Medium}
+\test{bx}{Bold}
+\test{eb}{Heavy}
+}
+
+\end{document}

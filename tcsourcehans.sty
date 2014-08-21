@@ -1,0 +1,50 @@
+% tcsourcehans.sty
+
+\NeedsTeXFormat{pLaTeX2e}
+\ProvidesPackage{tcsourcehans}[2014/08/21 v0.2 Source Han Sans JP]
+
+%%<+>\SourceHanSansScale
+\providecommand*{\SourceHanSansScale}{0.924690}
+
+\@onlypreamble\tcqgg@sp \let\tcqgg@sp\@empty 
+\edef\tcqgg@sc{\SourceHanSansScale}
+
+\def\tcqgg@fam{sourcehans}
+\def\tcqgg@cmapH{UniSourceHanSansJP-UTF16-H}
+\def\tcqgg@cmapV{UniSourceHanSansJP-UTF16-V}
+\def\tcqgg@fon#1{SourceHanSansJP-#1.otf}
+
+\@onlypreamble\tcqgg@process
+\def\tcqgg@process#1#2#3{%
+  \g@addto@macro\tcqgg@sp{%
+    \special{pdf:mapline r-\tcqgg@fam-#2-jy2  \tcqgg@cmapH\space\tcqgg@fon{#3}}%
+    \special{pdf:mapline r-\tcqgg@fam-#2-jy2x \tcqgg@cmapH\space\tcqgg@fon{#3}}%
+    \special{pdf:mapline r-\tcqgg@fam-#2-jt2  \tcqgg@cmapV\space\tcqgg@fon{#3}}%
+  }%
+  %
+  \DeclareFontShape{JY2}{\tcqgg@fam}{#1}{n}{<->s*[\tcqgg@sc]\tcqgg@fam-#2-jy2}{}%
+  \DeclareFontShape{JY2}{\tcqgg@fam}{#1}{it}{<->ssub*\tcqgg@fam/#1/n}{}%
+  \DeclareFontShape{JY2}{\tcqgg@fam}{#1}{sl}{<->ssub*\tcqgg@fam/#1/n}{}%
+  \DeclareFontShape{JY2}{\tcqgg@fam}{#1}{sc}{<->ssub*\tcqgg@fam/#1/n}{}%
+  %
+  \DeclareFontShape{JT2}{\tcqgg@fam}{#1}{n}{<->s*[\tcqgg@sc]\tcqgg@fam-#2-jt2}{}%
+  \DeclareFontShape{JT2}{\tcqgg@fam}{#1}{it}{<->ssub*\tcqgg@fam/#1/n}{}%
+  \DeclareFontShape{JT2}{\tcqgg@fam}{#1}{sl}{<->ssub*\tcqgg@fam/#1/n}{}%
+  \DeclareFontShape{JT2}{\tcqgg@fam}{#1}{sc}{<->ssub*\tcqgg@fam/#1/n}{}%
+}
+
+\DeclareFontFamily{JY2}{\tcqgg@fam}{}
+\DeclareFontFamily{JT2}{\tcqgg@fam}{}
+
+\tcqgg@process{el}{j}{ExtraLight}
+\tcqgg@process{l}{l}{Light}
+\tcqgg@process{m}{r}{Normal}
+\tcqgg@process{mb}{m}{Regular}
+\tcqgg@process{db}{d}{Medium}
+\tcqgg@process{b}{b}{Bold}
+\tcqgg@process{bx}{b}{Bold}
+\tcqgg@process{eb}{h}{Heavy}
+\AtBeginDvi{\tcqgg@sp}
+
+\endinput
+% EOF
