@@ -7,12 +7,12 @@ ZRさんの [tcsourcehans パッケージ](http://d.hatena.ne.jp/zrbabbler/20140
 インストール法
 -----
 1. アーカイブを展開して出てくる各ディレクトリ・ファイルを，適切なディレクトリに移動させます。
-  * `cmap/sourcehans` →  `$TEXMF/fonts/cmap/sourcehans`
-  * `tfm/sourcehans` →  `$TEXMF/fonts/tfm/sourcehans`
-  * `vf/sourcehans` →  `$TEXMF/fonts/vf/sourcehans`
-  * `tcsourcehans.sty` → `$TEXMF/tex/latex/sourcehans/`
+  * `cmap/sourcehans` →  `$TEXMFLOCAL/fonts/cmap/sourcehans`
+  * `tfm/sourcehans` →  `$TEXMFLOCAL/fonts/tfm/sourcehans`
+  * `vf/sourcehans` →  `$TEXMFLOCAL/fonts/vf/sourcehans`
+  * `tcsourcehans.sty` → `$TEXMFLOCAL/tex/latex/sourcehans/`
 
-2. [GitHub のレポジトリ](https://github.com/adobe-fonts/source-han-sans/tree/release/SubsetOTF) から，`SourceHanSansJP.zip` をダウンロードし，展開して出てくる各フォントファイルを `$TEXMF/fonts/opentype/sourcehans/` に移動します。
+2. [GitHub のレポジトリ](https://github.com/adobe-fonts/source-han-sans/tree/release/SubsetOTF) から，`SourceHanSansJP.zip` をダウンロードし，展開して出てくる各フォントファイルを `$TEXMFLOCAL/fonts/opentype/sourcehans/` に移動します。
 
 3. 必要ならば `maketexlsr` を実行します。
 
